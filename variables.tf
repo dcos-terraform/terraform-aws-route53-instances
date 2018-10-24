@@ -31,12 +31,6 @@ variable "ttl" {
   description = "The TTL of the record to add to the DNS zone "
 }
 
-/*
-variable "aws_lb_alias_name" {
-  description = "Alias for the LB for the Master Address if specified"
-  default = ""
-}
-*/
 variable "domain" {
   description = "The domain of your Route 53 Zone"
 }

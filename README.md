@@ -1,3 +1,25 @@
+AWS DC/OS Route53 Records for Instances (NOTE: THIS IS CURRENTLY EXPERIMENTAL AND NOT YET SUPPORTED)
+============
+This module is used to create a custom Route53 records for instances
+
+EXAMPLE
+-------
+
+```hcl
+module "agent_route53" {
+ source                    = "dcos-terraform/route53-instances/aws"
+ cluster_name              = "dcos-cluster"
+ domain                    = "testing.us"
+ ttl                       = "60"
+ aws_zone_id               = "ABCDE1278487696B"
+
+ num             = "1"
+ public_records  = "10.10.10.120"
+ private_records = "172.1.1.120"
+ hostname_format  = "agent"
+}
+```
+
 
 ## Inputs
 
