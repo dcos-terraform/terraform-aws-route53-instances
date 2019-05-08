@@ -9,11 +9,11 @@ output "private_fqdns" {
 }
 
 output "private_ips" {
-  description = "List of Private IPs"
+  description = "List of private ip addresses created by this module"
   value       = ["${aws_route53_record.instance_internal.*.records}"]
 }
 
 output "public_ips" {
-  description = "List of Public IPs"
+  description = "List of public ip addresses created by this module"
   value       = ["${aws_route53_record.instance_public.*.records}"]
 }

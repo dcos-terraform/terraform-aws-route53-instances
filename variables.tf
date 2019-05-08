@@ -1,25 +1,25 @@
 variable "cluster_name" {
-  description = "Cluster name all resources get named and tagged with"
+  description = "Name of the DC/OS cluster"
 }
 
 variable "hostname_format" {
-  description = "Format the hostname inputs are index+1, domain, cluster_name"
+  description = "Format the hostname inputs are index+1, region, cluster_name"
   default     = "%[3]s-instance%[1]d-%[2]s"
 }
 
 variable "num" {
-  description = "Number of instances"
+  description = "How many instances should be created"
   default     = "1"
 }
 
 variable "tags" {
-  description = "Custom tags added to the resources created by this module"
+  description = "Add custom tags to all resources"
   type        = "map"
   default     = {}
 }
 
 variable "aws_zone_id" {
-  description = "The Zone ID to be used"
+  description = "The Route 53 Zone ID to be used"
 }
 
 variable "type" {
@@ -28,7 +28,7 @@ variable "type" {
 }
 
 variable "ttl" {
-  description = "The TTL of the record to add to the DNS zone "
+  description = "The TTL of the record to add to the DNS zone"
 }
 
 variable "domain" {
